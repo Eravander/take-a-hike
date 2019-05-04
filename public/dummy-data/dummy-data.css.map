@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": [
+        "dummy-data.scss"
+    ],
+    "names": [],
+    "mappings": ";AAAA;EAEI;EACA;EACA;EACA;EACA;EACA;EAGA;EACE;EACA;EACF;;;AAGD;EAIG;EACA;EACA;EAGA;EACA;EACA;;;AAGH;EAEC;EACA;EAGA;EAGA;EAGA;EACA;;;AAGD;EAEC;EAGA;EAEE;EACA;EACA;EACA;;AAEF;EACE;EAIA;EAGA;;;AAKH;EAEC;;AAGA;EAEE",
+    "file": "dummy-data.css"
+}

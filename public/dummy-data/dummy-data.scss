@@ -1,0 +1,46 @@
+%fixedbox {
+ // Basic styling
+ box-sizing: border-box;
+ display: block;
+ font-size: 4em;
+ padding: 42px;
+ width: 6em;
+ height: 3em;
+
+ // Center box in middle of screen
+ position: fixed;
+   top: 50%;
+   left: 50%;
+ transform: translate3d(-50%,-50%,0);
+}
+
+.content {
+   // Basic styling
+   @extend %fixedbox;
+
+   font-weight: bold;
+   text-align: center;
+   z-index: 1000;
+
+   // Cut-out text effect
+   background: #fff;
+   color: #000;
+   mix-blend-mode: lighten;
+}
+
+section {
+ // Background image styling
+ background-repeat: no-repeat;
+ background-size: cover;
+
+ // Reset stacking context
+ isolation: isolate;
+
+ // Must be set to correctly position .wrapper below
+ position: relative;
+
+ // Height not required. Can be left as auto
+ height: 100vh;
+ padding: 1em;
+}
+
