@@ -1,21 +1,26 @@
 module.exports = function(sequelize, DataTypes) {
   var Hike = sequelize.define("Hike", {
+    trailId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     pathType: DataTypes.STRING,
     county: DataTypes.STRING,
     land: DataTypes.STRING,
-    watershed: DataTypes.String,
-    lon: DataTypes.Decimal(10, 10),
-    lat: DataTypes.Decimal(10, 10),
-    state: DataTypes.String,
-    parkCode: DataTypes.String,
-    quad: DataTypes.String,
-    district: DataTypes.String,
-    notes: DataTypes.String,
-    name: DataTypes.String,
-    elevation: DataTypes.Decimal(10, 10),
-    road: DataTypes.String,
-    trail: DataTypes.String,
-    trailType: DataTypes.String
+    watershed: DataTypes.STRING,
+    lon: DataTypes.DECIMAL,
+    lat: DataTypes.DECIMAL,
+    state: DataTypes.STRING,
+    parkCode: DataTypes.STRING,
+    quad: DataTypes.STRING,
+    district: DataTypes.STRING,
+    notes: DataTypes.STRING,
+    name: DataTypes.STRING,
+    elevation: DataTypes.DECIMAL,
+    road: DataTypes.STRING,
+    trail: DataTypes.STRING,
+    trailType: DataTypes.STRING
   });
   return Hike;
 };
