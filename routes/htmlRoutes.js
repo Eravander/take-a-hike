@@ -23,23 +23,21 @@ module.exports = function(app) {
   // trails route will display trails
   app.get("/trails", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
-      res.render("hike")
+      res.render("trail-card", trailInfo)
     });
   });
 
   // gear route will show all of the gear and where it was used
   app.get("/gear", function(req, res) {
     db.Gear.findAll({}).then(function(gearInfo) {
-      res.render("gear")
+      res.render("gear", gearInfo)
     });
   });
 
   // this route will let you look at specific gear items by searching their ID
   app.get("/gear/:id", function(req, res) {
     db.Gear.findOne({ where: {id: req.params.id } }).then(function(gearItem) {
-      res.render("gear", {
-        gear: gearInfo
-      });
+      res.render("gear", gearItem);
     });
   });
 
