@@ -37,7 +37,7 @@ module.exports = function(app) {
   // this route will let you look at specific gear items by searching their ID
   app.get("/gear/:id", function(req, res) {
     db.Gear.findOne({ where: {id: req.params.id } }).then(function(gearItem) {
-      res.render("gear", gearInfo);
+      res.render("gear", gearItem);
     });
   });
 
