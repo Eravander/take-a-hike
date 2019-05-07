@@ -1,3 +1,6 @@
+body {
+  font-family: 'Acme', sans-serif;
+}
 .firstStopContainer, #logInContainer {
     background: #348F50;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
@@ -8,14 +11,23 @@ width: 500px;
 height:400px;
 margin-left: 400px;   
 margin-top: 125px;   
-
 }
-
+#bioContainer {
+  background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 25px;
+text-align: center;
+width: 90%;
+height:600px;
+margin-left: 60px;   
+margin-top: 10px; 
+}
 .welcome {
     color:black;
     font-size: 40pt;
 padding-top: 50px;
-font-family: 'Acme', sans-serif;
+
 }
 .logInButton {
   width: 300px;
@@ -25,7 +37,7 @@ background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-2
 background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ;
 color: white;
-font-family: 'Acme', sans-serif;
+
 
 }
 .createAccountButton {
@@ -36,20 +48,38 @@ font-family: 'Acme', sans-serif;
     background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 color: white;
 /* border: 2px solid black;     */
-font-family: 'Acme', sans-serif;
+
 
 }
-.labelArea {
-  font-family: 'Acme', sans-serif;
+.labelArea, .labelArea2 {
+  margin-left: 20px;
+ float:left;
   color: black;
 font-size: 20pt;
 }
-.formInfo {
-  font-family: 'Acme', sans-serif;
+.formInfo, .formInfo2  {
+ margin-top: -60px;
   width: 300px;
   height: 40px;
 }
-
+.formInfo3 {
+ 
+  width: 300px;
+  height: 40px;
+  margin-left: -18px;
+}
+label {
+  margin-top: 10px;
+}
+.submit {
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #051ad1, #03b93a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #051ad1, #03b93a ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 200px;
+  height: 50px;
+  font-size:15pt;
+  font-family: 'Acme', sans-serif;
+}
 
 .wrapper:before, .content {
   box-sizing: border-box;
