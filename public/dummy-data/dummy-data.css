@@ -1,19 +1,21 @@
-.logInContainer {
+.firstStopContainer, #logInContainer {
     background: #348F50;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border-radius: 25px;
 text-align: center;
 width: 500px;
-height:500px;
-margin-left: 450px;      
+height:400px;
+margin-left: 400px;   
+margin-top: 125px;   
 
 }
 
 .welcome {
-    color: black;
+    color:black;
     font-size: 40pt;
-margin-top: 50px;
+padding-top: 50px;
+font-family: 'Acme', sans-serif;
 }
 .logInButton {
   width: 300px;
@@ -23,6 +25,7 @@ background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-2
 background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ;
 color: white;
+font-family: 'Acme', sans-serif;
 
 }
 .createAccountButton {
@@ -33,8 +36,19 @@ color: white;
     background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 color: white;
 /* border: 2px solid black;     */
-}
+font-family: 'Acme', sans-serif;
 
+}
+.labelArea {
+  font-family: 'Acme', sans-serif;
+  color: black;
+font-size: 20pt;
+}
+.formInfo {
+  font-family: 'Acme', sans-serif;
+  width: 300px;
+  height: 40px;
+}
 
 
 .wrapper:before, .content {
