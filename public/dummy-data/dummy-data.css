@@ -2,12 +2,18 @@
     background: #348F50;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-border: 2px solid black;
+    border-radius: 25px;
 text-align: center;
 width: 500px;
 height:500px;
 margin-left: 450px;      
 
+}
+
+.welcome {
+    color: black;
+    font-size: 40pt;
+margin-top: 50px;
 }
 .logInButton {
   width: 300px;
@@ -31,9 +37,6 @@ color: white;
 
 
 
-
-
-/* Scss converted code/*
 .wrapper:before, .content {
   box-sizing: border-box;
   display: block;
