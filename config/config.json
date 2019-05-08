@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "9005284014Ivo$",
-    "database": "hike",
+    "database": "Hike",
     "host": "localhost",
     "dialect": "mysql"
   },
