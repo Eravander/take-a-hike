@@ -1,0 +1,313 @@
+body {
+  font-family: 'Acme', sans-serif;
+}
+/* #abcdef {
+  background-image: url(https://source.unsplash.com/1920x1080?peak);
+} */
+.firstStopContainer, #logInContainer {
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 25px;
+text-align: center;
+width: 500px;
+height:400px;
+margin-left: 400px;   
+margin-top: 125px;   
+}
+#bioContainer {
+  background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(5, 20, 228, 0.5), rgba(51, 241, 3, 0.5)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 25px;
+text-align: center;
+width: 80%;
+height:600px;
+margin-left: 130px;   
+margin-top: 10px; 
+}
+.welcome {
+    color:black;
+    font-size: 40pt;
+padding-top: 50px;
+
+}
+.logInButton {
+  width: 300px;
+  height: 50px;
+  background: #000000;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+color: white;
+
+
+}
+.createAccountButton {
+    width: 300px;
+    height: 50px;
+    background: #000046;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+/* border: 2px solid black;     */
+
+
+}
+.bear {
+  float: left;
+  margin-top: 20px;
+
+}
+#heading {
+  float:right;
+  color:black;
+  font-size:60pt;
+margin-right: 250px;
+margin-top: 70px;
+}
+.hiker {
+  margin-top:-35px;
+}
+.trailsButton {
+  background: #F7971E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, rgb(231, 247, 14), rgb(241, 97, 13));  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, rgb(231, 247, 14), rgb(241,97, 13)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 60px;
+  width: 60%;
+  margin-top: 30px;
+}
+.trailsButton {
+  font-size: 30pt;
+  text-align: center;
+}
+.trailsButton:hover {
+  background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Green */
+  color: black;
+}
+.searchTrailBar:hover {
+  background: #833ab4;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* Green */
+  color: black;
+}
+.compass {
+  margin-top: -20px;
+}
+#searchTrails {
+  font-size: 20pt;
+  text-align: center;
+  color:black;
+  margin-top: 40px;
+}
+.socialMedia {
+  color:black;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.mediaImg {
+  margin-top: -15px;
+}
+.labelArea, .labelArea2 {
+  margin-left: 20px;
+ float:left;
+  color: black;
+font-size: 20pt;
+}
+.formInfo, .formInfo2  {
+ margin-top: -60px;
+  width: 300px;
+  height: 40px;
+}
+.formInfo3 {
+ 
+  width: 300px;
+  height: 40px;
+  margin-left: -18px;
+}
+label {
+  margin-top: 10px;
+}
+.submit {
+  background: #159957;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #051ad1, #03b93a);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #051ad1, #03b93a ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 200px;
+  height: 50px;
+  font-size:15pt;
+  font-family: 'Acme', sans-serif;
+}
+
+.wrapper:before, .content {
+  box-sizing: border-box;
+  display: block;
+  font-size: 4em;
+  padding: 42px;
+  width: 6em;
+  height: 3em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.content {
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  mix-blend-mode: lighten;
+}
+
+section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+  height: 100vh;
+  padding: 1em;
+}
+
+.wrapper:before, .content {
+  box-sizing: border-box;
+  display: block;
+  font-size: 4em;
+  padding: 42px;
+  width: 6em;
+  height: 3em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.content {
+  font-weight: bold;
+  text-align: center;
+  z-index: 1000;
+  background: #fff;
+  color: #000;
+  mix-blend-mode: lighten;
+}
+
+section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+  height: 100vh;
+  padding: 1em;
+}
+
+.wrapper {
+  clip: rect(auto auto auto auto);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.wrapper:before {
+  content: " ";
+  padding: 2em 3.5em;
+  mix-blend-mode: darken;
+}
+
+.one {
+  background-image: url(https://source.unsplash.com/1920x1080?peak);
+}
+.one .wrapper:before {
+  background: red;
+}
+
+/*# sourceMappingURL=dummy-data.css.map */
+/* Footer style */
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
+/* Sets the footer button style */
+.footer #button{
+	width:35px;
+	height:35px;
+	border: #727172 12px solid;
+	border-radius:35px;
+	margin:0 auto;
+	position:relative;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+/* Showing footer button */
+.footer #button:hover{
+	width:35px;
+	height:35px;
+	border: #3A3A3A 12px solid;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	position:relative;
+}
+.footer {
+	bottom:0;
+	left:0;
+	position:fixed;
+    width: 100%;
+    height: 2em;
+    overflow:hidden;
+    margin:0 auto;
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	z-index:999;
+}
+.footer:hover {
+	-webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+	height: 10em;
+}
+.footer #container{
+	margin-top:5px;
+	width:100%;
+height:100%;
+  position:relative;
+  top:0;
+  left:0;
+	background: black;
+}
+.footer #cont{
+  position:relative;
+  top:-45px;
+  right:190px;
+	width:150px;
+	height:auto;
+	margin:0 auto;
+}
+.footer_center{
+	width:500px;
+	float:left;
+  text-align:center;
+}
+.footer h3{
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+	font-weight: 100;
+	margin-top:70px;
+	margin-left:40px;
+}
+.ramrod {
+  color:white;
+  background-color:black;
+}

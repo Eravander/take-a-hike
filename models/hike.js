@@ -1,4 +1,4 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Hike = sequelize.define("Hike", {
     trailId: {
       type: DataTypes.INTEGER,
@@ -21,10 +21,10 @@ module.exports = function(sequelize, DataTypes) {
     road: DataTypes.STRING,
     trail: DataTypes.STRING,
     trailType: DataTypes.STRING
-  },{
-    timestamps: false
-  });
-  Hike.associate = function(models) {
+  }, {
+      timestamps: false
+    });
+  Hike.associate = function (models) {
     Hike.hasMany(models.Usertrails, {
       // foreignKey: 'trailId'
     });
