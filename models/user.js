@@ -1,18 +1,25 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define("User", {
     userId: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
       primaryKey: true
     },
-    name: DataTypes.STRING,
-    uniqueId: DataTypes.INTEGER,
-    trailId: DataTypes.INTEGER,
+    username: DataTypes.STRING,
+    email: DataTypes.STRING,
+    userTrail: DataTypes.INTEGER,
     complete: {
       type: DataTypes.BOOLEAN,
       defaultValue: false
     }
+  }, {
+    timestamps: false
   });
 
+  User.associate = function(models) {
+    User.hasMany(models.Usertrails, {
+      // foreignKey: 'userId'
+    });
+  };
   return User;
 };
