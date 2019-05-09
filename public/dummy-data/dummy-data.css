@@ -40,7 +40,8 @@ background: -webkit-linear-gradient(to right, #0f9b0f, #000000);  /* Chrome 10-2
 background: linear-gradient(to right, #0f9b0f, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 ;
 color: white;
-
+font-family: 'Acme', sans-serif;
+font-size: 20pt;
 
 }
 .createAccountButton {
@@ -50,6 +51,8 @@ color: white;
     background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 color: white;
+font-family: 'Acme', sans-serif;
+font-size: 20pt;
 /* border: 2px solid black;     */
 
 
@@ -57,6 +60,7 @@ color: white;
 .bear {
   float: left;
   margin-top: 20px;
+  border: 2pt solid black;
 
 }
 #heading {
@@ -81,7 +85,7 @@ margin-top: 70px;
   font-size: 30pt;
   text-align: center;
 }
-.trailsButton:hover {
+.trailsButton:hover, .submit:hover, .logInButton:hover, .createAccountButton:hover {
   background: #833ab4;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -89,9 +93,9 @@ background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+
   color: black;
 }
 .searchTrailBar:hover {
-  background: #833ab4;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: #833ab4;   */
+/* background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);   */
+/* background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* Green */
   color: black;
 }
