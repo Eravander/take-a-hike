@@ -3,8 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all trails
   app.get("/api/trails", function(req, res) {
-    db.Hike.findAll({}).then(function(trail) {
-      res.json(trail);
+    db.Hike.findAll({}).then(function(trailInfo) {
+      res.render("trail-card", trailInfo);
     });
   });
 
