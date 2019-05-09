@@ -3,13 +3,13 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-      res.render("index");
+    res.render("index");
   });
 
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
     db.User.findAll({}).then(function(allUsers) {
-      res.render("user", allUsers)
+      res.render("user", allUsers);
     });
   });
 
@@ -30,14 +30,17 @@ module.exports = function(app) {
   // gear route will show all of the gear and where it was used
   app.get("/gear", function(req, res) {
     db.Gear.findAll({}).then(function(gearInfo) {
-      res.render("gear", gearInfo)
+      res.render("gear", gearInfo);
     });
   });
 
   // this route will let you look at specific gear items by searching their ID
   app.get("/gear/:id", function(req, res) {
+    // eslint-disable-next-line prettier/prettier
     db.Gear.findOne({ where: {id: req.params.id } }).then(function(gearItem) {
-      res.render("gear", gearItem);
+      res.render("gear", {
+        gear: gearItem
+      });
     });
   });
 

@@ -95,9 +95,12 @@ var handleDeleteBtnClick = function() {
 };
 
 // Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
+
 $gearDisplay.on("click", ".delete", handleDeleteBtnClick);
 
 // function showNav() {
 //   document.getElementById("exploretext").innerHTML = "You got it!";
 // }
+
+$exampleList.on("click", ".delete", handleDeleteBtnClick);
+
