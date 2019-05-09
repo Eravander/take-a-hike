@@ -23,7 +23,7 @@ module.exports = function(app) {
   // trails route will display trails
   app.get("/trails", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
-      res.render("trail-card", trailInfo)
+      res.render("trail-card", trailInfo);
     });
   });
 
