@@ -1,5 +1,10 @@
 module.exports = function(sequelize, DataTypes) {
   var Hike = sequelize.define("Hike", {
+    trailId: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true
+    },
     pathType: DataTypes.STRING,
     county: DataTypes.STRING,
     land: DataTypes.STRING,
