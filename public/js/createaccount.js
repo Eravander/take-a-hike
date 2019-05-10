@@ -1,22 +1,25 @@
 $(document).ready(function () {
-    var nameInput = $(".formInfo2")
-    $(document).on("click", emailSubmit);
+    var emailInput = $(".formInfo2");
+    $(".submit").on("click", emailSubmit);
 
     
         function emailSubmit (event) {
             event.preventDefault();
-            if (!nameInput.val().trim().trim()) {
+            if (!emailInput.val().trim().trim()) {
                 return;
             }
 
             addEmail({
-                name: nameInput
+                email: emailInput
                   .val()
                   .trim()
+                
               });
 
-            function addEmail(email){
-                $.post("/api/user", email);
+            function addEmail(emailReq){
+                console.log(emailReq);
+                $.post("/api/user", emailReq);
+                window.location.href = "/login"
             }
         }
     

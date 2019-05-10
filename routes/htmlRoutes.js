@@ -9,6 +9,14 @@ module.exports = function(app) {
 
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/data/land.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/data/login.html"));
+  });
+
+  app.get("/createaccount", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/data/createaccount.html"));
   });
 
