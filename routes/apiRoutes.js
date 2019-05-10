@@ -16,9 +16,9 @@ module.exports = function(app) {
   });
 
   // Create a new example
-  app.post("/api/gear", function(req, res) {
-    db.Gear.create(req.body).then(function(newItem) {
-      res.json(newItem);
+  app.post("/api/user", function(req, res) {
+    db.User.create(req.body).then(function(newItem) {
+      res.redirect("/");
     });
   });
 

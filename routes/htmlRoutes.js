@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
@@ -8,9 +9,7 @@ module.exports = function(app) {
 
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
-    db.User.findAll({}).then(function(allUsers) {
-      res.render("user", allUsers);
-    });
+    res.sendFile(path.join(__dirname, "../public/data/createaccount.html"));
   });
 
   // pass in any specific ID of a user and display the info for that user
