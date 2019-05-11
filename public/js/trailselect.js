@@ -41,21 +41,21 @@ $(document).ready(function() {
     });
   }
 
-  $("#clickMe").on("click", function(event) {
+  $(document).on("click", ".btn", function(event) {
       console.log("fuck")
     event.preventDefault();
     var url = window.location.pathname;
     var trail = $(this).val();
     console.log(trail)
-    var user = url.split("/")[2];
+    var user = url.split("/")[1];
     console.log(user)
     addTrail({
       HikeTrailId: trail,
-      UserUserId: user
+      UserUserId: 1
     });
     function addTrail(data) {
-      $.post(`/api/user/${user}/savetrail`, data);
-      window.location.href = "/user/1/mytrails";
+      $.post(`/api/trails/save`, data);
+    //   window.location.href = "/user/1/mytrails";
     }
   });
 });
