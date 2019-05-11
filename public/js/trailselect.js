@@ -27,12 +27,13 @@ $(document).ready(function() {
           .text("Elevation: " + data.elevation);
         card.append(theElevation);
         //adding the button
-        var button = $("<a>")
+        var button = $("<button>Save</button>")
           .addClass("btn btn-dark")
           .attr("href", "/api/trails/save")
-          .attr("role", "button")
-          .attr("value =" + data.trailId)
-          .text("Save");
+        //   .attr("role", "button")
+        //   .attr("value =" + data.trailId)
+          console.log(button)
+        //   button.text = "Save"
         card.append(button);
         // and then add the new card div onto the html element I'm targeting
         var cardArea = $("#trail-row");
