@@ -22,7 +22,7 @@ $(document).ready(function () {
     };
 
     $(".trailsButton").on("click", function(){
-        window.location.href = "/user:id/mytrails"
+        window.location.href = "/user/:id/mytrails"
     });
 
 });

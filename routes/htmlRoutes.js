@@ -4,11 +4,13 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    // console.log('here');
     res.render("index");
   });
 
   //temporary bug fix
   app.get("/user/undefined", function(req, res) {
+    // console.log('here');
     res.render("404");
   });
 
@@ -65,7 +67,8 @@ module.exports = function(app) {
   });
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  // app.get("*", function(req, res) {
+  //   console.log('here');
+  //   res.render("404");
+  // });
 };

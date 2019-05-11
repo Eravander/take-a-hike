@@ -1,5 +1,5 @@
 $(document).on("click", forward);
 
 function forward() {
-  window.location.href = "/user"
-};
+  window.location.href = "/user";
+}
