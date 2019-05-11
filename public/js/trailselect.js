@@ -30,10 +30,9 @@ $(document).ready(function() {
         var button = $("<button>Save</button>")
           .addClass("btn btn-dark")
           .attr("href", "/api/trails/save")
-        //   .attr("role", "button")
-        //   .attr("value =" + data.trailId)
+          .attr("value", data.trailId)
+          .attr("id", "clickMe")
           console.log(button)
-        //   button.text = "Save"
         card.append(button);
         // and then add the new card div onto the html element I'm targeting
         var cardArea = $("#trail-row");
@@ -42,19 +41,21 @@ $(document).ready(function() {
     });
   }
 
-  $(".btn-btn-dark").on("click", function(event) {
+  $("#clickMe").on("click", function(event) {
+      console.log("fuck")
     event.preventDefault();
     var url = window.location.pathname;
     var trail = $(this).val();
+    console.log(trail)
     var user = url.split("/")[2];
-
+    console.log(user)
     addTrail({
       HikeTrailId: trail,
       UserUserId: user
     });
     function addTrail(data) {
       $.post(`/api/user/${user}/savetrail`, data);
-      window.location.href = "/user/:id/mytrails";
+      window.location.href = "/user/1/mytrails";
     }
   });
 });
