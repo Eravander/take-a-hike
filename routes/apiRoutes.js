@@ -5,8 +5,7 @@ module.exports = function(app) {
   // Get all trails
   app.get("/api/trails/", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
-      res.render("trail-card", trailInfo);
-      // res.json(trailInfo);
+      res.json(trailInfo);
     });
   });
 
@@ -30,6 +29,13 @@ module.exports = function(app) {
   app.get("/api/user/:id", function(req, res) {
     console.log(req.params.id)
     db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+      res.json(userInfo);
+    });
+  });
+
+  app.get("/api/:email", function(req, res) {
+    console.log(req.params.email)
+    db.User.findOne({ where: { email: req.params.email } }).then(function(userInfo) {
       res.json(userInfo);
     });
   });
