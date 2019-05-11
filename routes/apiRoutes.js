@@ -1,10 +1,12 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Get all trails
-  app.get("/api/trails", function(req, res) {
+  app.get("/api/trails/", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
       res.render("trail-card", trailInfo);
+      // res.json(trailInfo);
     });
   });
 
@@ -15,10 +17,20 @@ module.exports = function(app) {
     });
   });
 
-  // Create a new example
-  app.post("/api/gear", function(req, res) {
-    db.Gear.create(req.body).then(function(newItem) {
-      res.json(newItem);
+  // Create a new user
+  app.post("/api/user", function(req, res) {
+    console.log(req.body)
+    db.User.create({
+      email: req.body.email
+    }).then(function() {
+      res.redirect("/");
+    });
+  });
+
+  app.get("/api/user/:id", function(req, res) {
+    console.log(req.params.id)
+    db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+      res.json(userInfo);
     });
   });
 
