@@ -4,7 +4,13 @@ var path = require("path");
 module.exports = function(app) {
   // Get all trails
   app.get("/api/trails/", function(req, res) {
-    db.Hike.findAll({}).then(function(trailInfo) {
+    db.Hike.findAll({limit: 12}).then(function(trailInfo) {
+      res.json(trailInfo);
+    });
+  });
+
+  app.post("/api/trails/save", function(req, res) {
+    db.Usertrails.create(req.body).then(function(trailInfo) {
       res.json(trailInfo);
     });
   });
