@@ -4,12 +4,20 @@ var path = require("path");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    // console.log('here');
     res.render("index");
   });
 
   //temporary bug fix
   app.get("/user/undefined", function(req, res) {
+    // console.log('here');
     res.render("404");
+  });
+
+  app.get("/trails/", function(req, res) {
+    db.Hike.findAll({ limit: 12 }).then(function(trailInfo) {
+      res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
+    });
   });
 
   // list all the users? do we even want this?
@@ -33,9 +41,16 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/data/bio.html"));
   });
 
+  app.get("/user/:id/mytrails", function(req, res) {
+    // db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+    //   res.json(userInfo);
+    // });
+    res.sendFile(path.join(__dirname, "../public/data/trailview.html"));
+  });
+
   // trails route will display trails
-  app.get("/trails", function(req, res) {
-    db.Hike.findAll({}).then(function(trailInfo) {
+  app.get("/user/:id/savetrails", function(req, res) {
+    db.Hike.findAll({}).then(function() {
       res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
     });
   });
@@ -56,10 +71,10 @@ module.exports = function(app) {
       });
     });
   });
-  
 
   // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
-  });
+  // app.get("*", function(req, res) {
+  //   console.log('here');
+  //   res.render("404");
+  // });
 };

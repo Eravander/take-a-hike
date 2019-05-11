@@ -7,7 +7,7 @@ $(".submit").on("click", function (event) {
     getEmail();
 
     function getEmail() {
-        if (email.trim() === " ") {
+        if (email.trim() != " ") {
             $.get(`/api/${email}`, function (userInfo) {
                 if (userInfo.userId != "undefined") {
                     id = userInfo.userId;

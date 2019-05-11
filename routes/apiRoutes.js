@@ -4,7 +4,7 @@ var path = require("path");
 module.exports = function(app) {
   // Get all trails
   app.get("/api/trails/", function(req, res) {
-    db.Hike.findAll({limit: 12}).then(function(trailInfo) {
+    db.Hike.findAll({ limit: 12 }).then(function(trailInfo) {
       res.json(trailInfo);
     });
   });
@@ -35,6 +35,12 @@ module.exports = function(app) {
   app.get("/api/user/:id", function(req, res) {
     console.log(req.params.id)
     db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+      res.json(userInfo);
+    });
+  });
+
+  app.get("/api/user/:id/mytrails", function(req, res) {
+    db.Usertrails.findAll({ where: { userId: req.params.id } }).then(function(userInfo) {
       res.json(userInfo);
     });
   });
