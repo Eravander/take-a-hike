@@ -7,6 +7,11 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  //temporary bug fix
+  app.get("/user/undefined", function(req, res) {
+    res.render("404");
+  });
+
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/data/land.html"));
@@ -31,7 +36,7 @@ module.exports = function(app) {
   // trails route will display trails
   app.get("/trails", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
-      res.render("trail-card", trailInfo)
+      res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
     });
   });
 
@@ -51,6 +56,7 @@ module.exports = function(app) {
       });
     });
   });
+  
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

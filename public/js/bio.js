@@ -21,5 +21,8 @@ $(document).ready(function () {
 
     };
 
-    
+    $(".trailsButton").on("click", function(){
+        window.location.href = "/trails"
+    });
+
 });
