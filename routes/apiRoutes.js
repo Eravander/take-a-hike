@@ -27,6 +27,13 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/user/:id", function(req, res) {
+    console.log(req.params.id)
+    db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+      res.json(userInfo);
+    });
+  });
+
   // Delete an example by id
   app.delete("/api/examples/:id", function(req, res) {
     db.Example.destroy({ where: { id: req.params.id } }).then(function(

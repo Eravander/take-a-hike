@@ -22,9 +22,10 @@ module.exports = function(app) {
 
   // pass in any specific ID of a user and display the info for that user
   app.get("/user/:id", function(req, res) {
-    db.User.findOne({ where: { id: req.params.id } }).then(function(userInfo) {
-      res.render("user", userInfo);
-    });
+    // db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+    //   res.json(userInfo);
+    // });
+    res.sendFile(path.join(__dirname, "../public/data/bio.html"));
   });
 
   // trails route will display trails
