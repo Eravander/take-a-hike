@@ -1,4 +1,5 @@
 var db = require("../models");
+var path = require("path");
 
 module.exports = function(app) {
   // Load index page
@@ -6,24 +7,43 @@ module.exports = function(app) {
     res.render("index");
   });
 
+  //temporary bug fix
+  app.get("/user/undefined", function(req, res) {
+    res.render("404");
+  });
+
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
-    db.User.findAll({}).then(function(allUsers) {
-      res.render("user", allUsers);
-    });
+    res.sendFile(path.join(__dirname, "../public/data/land.html"));
+  });
+
+  app.get("/login", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/data/login.html"));
+  });
+
+  app.get("/createaccount", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/data/createaccount.html"));
   });
 
   // pass in any specific ID of a user and display the info for that user
   app.get("/user/:id", function(req, res) {
-    db.User.findOne({ where: { id: req.params.id } }).then(function(userInfo) {
-      res.render("user", userInfo);
-    });
+    // db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+    //   res.json(userInfo);
+    // });
+    res.sendFile(path.join(__dirname, "../public/data/bio.html"));
+  });
+
+  app.get("/user/:id/mytrails", function(req, res) {
+    // db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+    //   res.json(userInfo);
+    // });
+    res.sendFile(path.join(__dirname, "../public/data/trailview.html"));
   });
 
   // trails route will display trails
-  app.get("/trails", function(req, res) {
-    db.Hike.findAll({}).then(function(trailInfo) {
-      res.render("trail-card", trailInfo);
+  app.get("/user/:id/savetrails", function(req, res) {
+    db.Hike.findAll({}).then(function() {
+      res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
     });
   });
 
