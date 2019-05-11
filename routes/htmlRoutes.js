@@ -14,6 +14,12 @@ module.exports = function(app) {
     res.render("404");
   });
 
+  app.get("/trails/", function(req, res) {
+    db.Hike.findAll({ limit: 12 }).then(function(trailInfo) {
+      res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
+    });
+  });
+
   // list all the users? do we even want this?
   app.get("/user", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/data/land.html"));

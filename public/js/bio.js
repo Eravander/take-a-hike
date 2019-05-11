@@ -21,8 +21,8 @@ $(document).ready(function () {
 
     };
 
-    $(".trailsButton").on("click", function(){
-        window.location.href = "/user/:id/mytrails"
+    $("#search").on("click", function(){
+        window.location.href = `/trails/`
     });
 
 });

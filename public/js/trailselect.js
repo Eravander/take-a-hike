@@ -41,20 +41,19 @@ $(document).ready(function() {
     });
   }
 
-  // $(".btn-btn-dark").on("click", function(event){
-  //     event.preventDefault();
-  //     var url = window.location.pathname;
-  //    var trail = $(this).val();
-  //    var user = url.split("/")[2]
+  $(".btn-btn-dark").on("click", function(event) {
+    event.preventDefault();
+    var url = window.location.pathname;
+    var trail = $(this).val();
+    var user = url.split("/")[2];
 
-  //    addTrail({
-  //        HikeTrailId: trail,
-  //        UserUserId: user
-  //    });
-  //    function addTrail(data) {
-  //         $.post("/api/user/:id/savetrail", data);
-  //         window.location.href = "/user/:id/mytrails"
-  //    }
-
-  // });
+    addTrail({
+      HikeTrailId: trail,
+      UserUserId: user
+    });
+    function addTrail(data) {
+      $.post(`/api/user/${user}/savetrail`, data);
+      window.location.href = "/user/:id/mytrails";
+    }
+  });
 });
