@@ -33,8 +33,15 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/data/bio.html"));
   });
 
+  app.get("/user/:id/mytrails", function(req, res) {
+    // db.User.findOne({ where: { userId: req.params.id } }).then(function(userInfo) {
+    //   res.json(userInfo);
+    // });
+    res.sendFile(path.join(__dirname, "../public/data/trailview.html"));
+  });
+
   // trails route will display trails
-  app.get("/trails", function(req, res) {
+  app.get("/user/:id/savetrails", function(req, res) {
     db.Hike.findAll({}).then(function(trailInfo) {
       res.sendFile(path.join(__dirname, "../public/data/trailselect.html"));
     });

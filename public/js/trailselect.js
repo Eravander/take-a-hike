@@ -6,7 +6,7 @@ $(document).ready(function () {
     function printcards() {
         console.log("fuck")
         $.get("/api/trails/", function (trailInfo) {
-            console.log(trailInfo.trail)
+            console.log(trailInfo)
             trailInfo.forEach(function (data) {
                 console.log(data.trail)
                 //    create a new div
@@ -21,7 +21,7 @@ $(document).ready(function () {
                 var theElevation = $("<p>").addClass("card-text").text("Elevation: " + data.elevation);
                 card.append(theElevation);
                 //adding the button
-                var button = $("<a>").addClass("btn btn-dark").attr("href", "/api/trails/save").attr("role", "button");
+                var button = $("<a>").addClass("btn btn-dark").attr("href", "/api/trails/save").attr("role", "button").attr("value =" + data.trailId).text("Save");
                 card.append(button);
                 // and then add the new card div onto the html element I'm targeting
                 var cardArea = $("#trail-row");
@@ -29,4 +29,21 @@ $(document).ready(function () {
             });
         });
     }
+
+    // $(".btn-btn-dark").on("click", function(event){
+    //     event.preventDefault();
+    //     var url = window.location.pathname;
+    //    var trail = $(this).val();
+    //    var user = url.split("/")[2]
+
+    //    addTrail({
+    //        HikeTrailId: trail,
+    //        UserUserId: user
+    //    });
+    //    function addTrail(data) {
+    //         $.post("/api/user/:id/savetrail", data);
+    //         window.location.href = "/user/:id/mytrails"
+    //    }
+        
+    // });
 });

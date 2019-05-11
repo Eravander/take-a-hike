@@ -39,6 +39,12 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/user/:id/mytrails", function(req, res) {
+    db.Usertrails.findAll({ where: { userId: req.params.id } }).then(function(userInfo) {
+      res.json(userInfo);
+    });
+  });
+
   app.get("/api/:email", function(req, res) {
     console.log(req.params.email)
     db.User.findOne({ where: { email: req.params.email } }).then(function(userInfo) {
