@@ -13,7 +13,7 @@ Demo of the application: https://blooming-beyond-54775.herokuapp.com/
 * Node.js
 * mySQL
 * Express
-* Sequalize
+* Sequelize
 * Handlebars
 
 
